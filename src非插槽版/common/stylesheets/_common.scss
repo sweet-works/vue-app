@@ -1,0 +1,12 @@
+body{
+    background: $bg-color;
+}
+.round{border-radius: 50%};
+a{text-decoration: none;color:#f1f1f1}
+*{margin:0;padding:0}
+img{display: block;}
+.bc{background:#d6d6d7 url("//img02.yiguo.com/e/web/150930/00982/163525/placeholder_140x140.png") no-repeat 50%}
+.top{padding:1rem 0;}
+.top-border{
+  border-top:1px #fff solid;
+}
