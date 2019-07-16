@@ -7,9 +7,13 @@ import './method/rem'
 import  './common/stylesheets/main.scss'
 //引入路由
 import router from './router/router.js'
+//引入store
+import store from './store/store'
+import './getZB'
 new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
-  router,
+  router,store
 })
+

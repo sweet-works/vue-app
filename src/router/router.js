@@ -26,6 +26,7 @@ export default new VueRoute({
       meta:{
         showFoot:true
       }
+
     },
     {
       path:'/search',

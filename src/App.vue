@@ -8,10 +8,13 @@
 <script>
 import FooterGuide from "./components/FooterGuide/FooterGuide";
 import Home from "./pages/Home/Home";
-import './api/ajax'
+import * as types from './store/types.js';
 export default {
   name: 'app',
-  components: { Home, FooterGuide}
+  components: { Home, FooterGuide},
+  mounted() {
+          this.$store.dispatch(types.RECEIVE_ADDRESS,123)
+  }
 }
 </script>
 

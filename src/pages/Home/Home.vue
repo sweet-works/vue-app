@@ -1,6 +1,6 @@
 <template>
   <div class="home top">
-    <Navbar :title='title'>
+    <Navbar :title='getCount'>
       <span class="left" slot="left">
       <router-link to="/search"><i style="font-size: .25rem" class="iconfont icon-sousuo"></i></router-link>
       </span>
@@ -34,12 +34,15 @@
   import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
   import ShopList from "../../components/ShopList/ShopList";
+  import {reqFood} from '../../api/index'
+  import {mapGetters} from 'vuex'
   export default {
     name:'Home',
     components: {ShopList, Navbar},
     data () {
       return {
-       title:'上海市宝山区同济之路199号12311243'
+       title:'上海市宝山区同济之路199号12311243',
+        list:[]
       }
     },mounted(){
       var mySwiper = new Swiper('.swiper-container', {
@@ -49,6 +52,11 @@
           el: '.swiper-pagination',
         },
       })
+
+    },computed:{
+      ...mapGetters([
+        'getCount'
+      ])
     }
 
   }
